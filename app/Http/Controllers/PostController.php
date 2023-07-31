@@ -11,7 +11,7 @@ class PostController extends Controller
        return view('posts.index')->with(['posts' => $post->getPaginateByLimit(1)]);
     }
     
-    piblic function show(Post $post){
+    public function show(Post $post){
         return view('posts/show')->with(['post' => $post]);
     }
     public function create()
