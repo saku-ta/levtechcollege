@@ -3,7 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Blog</title>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+    
     <body>
         <h1>Blog Name</h1>
         <form action="/posts" method="POST">
@@ -18,8 +21,10 @@
                 <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。">{{ old('post.body') }}</textarea>
                 <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
-            <input type="submit" value="保存"/>
+            <input type="submit" value="store"/>
         </form>
-        <div class="back">[<a href="/">back</a>]</div>
+        <div class="footer">
+            <a href="/">戻る</a>
+        </div>
     </body>
 </html>
